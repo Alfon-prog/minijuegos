@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="pagina">
+  <header class="barra">
+    <p class="logo">AURA<span class="logo__acento">FARMERS</span></p>
+    <p class="barra__aura"><span data-dato="aura">1.000</span> de aura</p>
+    <p class="barra__jugador" title="Tu perfil"><span data-dato="inicial">S</span></p>
+  </header>
+
+  <nav class="menu" aria-label="Navegación principal">
+    <a class="menu__enlace" href="lobby.html">Lobby</a>
+    <a class="menu__enlace menu__enlace--activo" href="tienda.html" aria-current="page">Tienda</a>
+    <a class="menu__enlace" href="personaje.html">Personaje</a>
+    <a class="menu__enlace" href="configuracion.html">Configuración</a>
+  </nav>
+
+  <main class="contenido">
+    <section class="bloque">
+      <h1 class="bloque__titulo">Tienda de aura</h1>
+      <p class="bloque__texto">Mejora a tu personaje. Cada artículo sube su nivel de aura.</p>
+
+      <div class="tarjetas">
+        <article class="tarjeta tarjeta--articulo">
+          <p class="tarjeta__categoria">Cabeza</p>
+          <h2 class="tarjeta__titulo" data-dato="articulo-nombre">Gorra de NPC</h2>
+          <p class="tarjeta__nivel">Nivel <span data-dato="articulo-nivel">1</span></p>
+          <p class="tarjeta__precio"><span data-dato="articulo-precio">250</span> de aura</p>
+          <button class="boton boton--comprar" type="button">Comprar</button>
+        </article>
+
+        <article class="tarjeta tarjeta--articulo">
+          <p class="tarjeta__categoria">Cuerpo</p>
+          <h2 class="tarjeta__titulo" data-dato="articulo-nombre">Sudadera de Sigma</h2>
+          <p class="tarjeta__nivel">Nivel <span data-dato="articulo-nivel">2</span></p>
+          <p class="tarjeta__precio"><span data-dato="articulo-precio">400</span> de aura</p>
+          <button class="boton boton--comprar" type="button">Comprar</button>
+        </article>
+
+        <article class="tarjeta tarjeta--articulo">
+          <p class="tarjeta__categoria">Calzado</p>
+          <h2 class="tarjeta__titulo" data-dato="articulo-nombre">Chanclas con calcetín</h2>
+          <p class="tarjeta__nivel">Nivel <span data-dato="articulo-nivel">1</span></p>
+          <p class="tarjeta__precio"><span data-dato="articulo-precio">150</span> de aura</p>
+          <button class="boton boton--comprar" type="button">Comprar</button>
+        </article>
+
+        <article class="tarjeta tarjeta--articulo">
+          <p class="tarjeta__categoria">Accesorio</p>
+          <h2 class="tarjeta__titulo" data-dato="articulo-nombre">Gafas de sol de noche</h2>
+          <p class="tarjeta__nivel">Nivel <span data-dato="articulo-nivel">3</span></p>
+          <p class="tarjeta__precio"><span data-dato="articulo-precio">700</span> de aura</p>
+          <button class="boton boton--comprar" type="button">Comprar</button>
+        </article>
+      </div>
+    </section>
+  </main>
+   
+</body>
+</html>

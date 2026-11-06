@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="pagina">
+  <header class="barra">
+    <p class="logo">AURA<span class="logo__acento">FARMERS</span></p>
+    <p class="barra__aura"><span data-dato="aura">1.000</span> de aura</p>
+    <p class="barra__jugador" title="Tu perfil"><span data-dato="inicial">S</span></p>
+  </header>
+
+  <nav class="menu" aria-label="Navegación principal">
+    <a class="menu__enlace menu__enlace--activo" href="lobby.html" aria-current="page">Lobby</a>
+    <a class="menu__enlace" href="tienda.html">Tienda</a>
+    <a class="menu__enlace" href="personaje.html">Personaje</a>
+    <a class="menu__enlace" href="configuracion.html">Configuración</a>
+  </nav>
+
+  <main class="contenido">
+    <section class="bloque bloque--personaje">
+      <h1 class="bloque__titulo">Hola, <span data-dato="apodo">SigmaDeLaMancha</span></h1>
+      <div class="personaje" aria-hidden="true">
+        <div class="personaje__cabeza"></div>
+        <div class="personaje__cuerpo"></div>
+        <div class="personaje__pies"></div>
+      </div>
+      <p class="bloque__texto">Nivel de aura: <strong>principiante con potencial</strong>.</p>
+    </section>
+
+    <section class="bloque">
+      <h2 class="bloque__titulo">Bonus diario</h2>
+      <p class="bloque__texto">Vuelve cada día y cobra aura gratis. Eso sí, con actitud.</p>
+      <button class="boton boton--bonus" type="button">Cobrar +<span data-dato="bonus">100</span> de aura</button>
+    </section>
+
+    <section class="bloque">
+      <h2 class="bloque__titulo">Minijuegos</h2>
+      <div class="tarjetas">
+        <article class="tarjeta tarjeta--bloqueada">
+          <h3 class="tarjeta__titulo">Duelo de Miradas</h3>
+          <p class="tarjeta__texto">Aguanta sin parpadear más que tu rival. Ganas aura, pierdes humedad ocular.</p>
+          <span class="tarjeta__etiqueta">Próximamente</span>
+        </article>
+        <article class="tarjeta tarjeta--bloqueada">
+          <h3 class="tarjeta__titulo">Ceja Arriba</h3>
+          <p class="tarjeta__texto">Levanta la ceja en el momento justo. Un solo milisegundo de retraso y adiós aura.</p>
+          <span class="tarjeta__etiqueta">Próximamente</span>
+        </article>
+        <article class="tarjeta tarjeta--bloqueada">
+          <h3 class="tarjeta__titulo">Silencio Incómodo</h3>
+          <p class="tarjeta__texto">No digas nada durante 30 segundos mientras todo el mundo te mira.</p>
+          <span class="tarjeta__etiqueta">Próximamente</span>
+        </article>
+      </div>
+    </section>
+</body>
+</html>

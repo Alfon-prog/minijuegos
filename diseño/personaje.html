@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <body class="pagina">
+  <header class="barra">
+    <p class="logo">AURA<span class="logo__acento">FARMERS</span></p>
+    <p class="barra__aura"><span data-dato="aura">1.000</span> de aura</p>
+    <p class="barra__jugador" title="Tu perfil"><span data-dato="inicial">S</span></p>
+  </header>
+
+  <nav class="menu" aria-label="Navegación principal">
+    <a class="menu__enlace" href="lobby.html">Lobby</a>
+    <a class="menu__enlace" href="tienda.html">Tienda</a>
+    <a class="menu__enlace menu__enlace--activo" href="personaje.html" aria-current="page">Personaje</a>
+    <a class="menu__enlace" href="configuracion.html">Configuración</a>
+  </nav>
+
+  <main class="contenido">
+    <section class="bloque bloque--personaje">
+      <h1 class="bloque__titulo">Tu personaje</h1>
+      <div class="personaje personaje--grande" aria-hidden="true">
+        <div class="personaje__cabeza"></div>
+        <div class="personaje__cuerpo"></div>
+        <div class="personaje__pies"></div>
+      </div>
+      <p class="bloque__texto">Llevas puesto: <strong data-dato="puesto">Gorra de NPC</strong>.</p>
+    </section>
+
+    <section class="bloque">
+      <h2 class="bloque__titulo">Tus artículos</h2>
+      <div class="tarjetas">
+        <article class="tarjeta tarjeta--articulo">
+          <p class="tarjeta__categoria">Cabeza</p>
+          <h3 class="tarjeta__titulo" data-dato="articulo-nombre">Gorra de NPC</h3>
+          <p class="tarjeta__nivel">Nivel <span data-dato="articulo-nivel">1</span></p>
+          <p class="tarjeta__estado">Equipado</p>
+          <button class="boton boton--equipar" type="button">Equipar</button>
+        </article>
+
+        <article class="tarjeta tarjeta--articulo">
+          <p class="tarjeta__categoria">Cuerpo</p>
+          <h3 class="tarjeta__titulo" data-dato="articulo-nombre">Sudadera de Sigma</h3>
+          <p class="tarjeta__nivel">Nivel <span data-dato="articulo-nivel">2</span></p>
+          <p class="tarjeta__estado">En el armario</p>
+          <button class="boton boton--equipar" type="button">Equipar</button>
+        </article>
+
+        <article class="tarjeta tarjeta--articulo">
+          <p class="tarjeta__categoria">Calzado</p>
+          <h3 class="tarjeta__titulo" data-dato="articulo-nombre">Chanclas con calcetín</h3>
+          <p class="tarjeta__nivel">Nivel <span data-dato="articulo-nivel">1</span></p>
+          <p class="tarjeta__estado">En el armario</p>
+          <button class="boton boton--equipar" type="button">Equipar</button>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

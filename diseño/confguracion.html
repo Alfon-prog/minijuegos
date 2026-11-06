@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="pagina">
+  <header class="barra">
+    <p class="logo">AURA<span class="logo__acento">FARMERS</span></p>
+    <p class="barra__aura"><span data-dato="aura">1.000</span> de aura</p>
+    <p class="barra__jugador" title="Tu perfil"><span data-dato="inicial">S</span></p>
+  </header>
+
+  <nav class="menu" aria-label="Navegación principal">
+    <a class="menu__enlace" href="lobby.html">Lobby</a>
+    <a class="menu__enlace" href="tienda.html">Tienda</a>
+    <a class="menu__enlace" href="personaje.html">Personaje</a>
+    <a class="menu__enlace menu__enlace--activo" href="configuracion.html" aria-current="page">Configuración</a>
+  </nav>
+
+  <main class="contenido">
+    <section class="bloque">
+      <h1 class="bloque__titulo">Configuración</h1>
+
+      <form class="formulario" action="configuracion.html" method="post">
+        <div class="formulario__campo">
+          <label class="formulario__etiqueta" for="apodo">Apodo</label>
+          <input class="formulario__entrada" type="text" id="apodo" name="apodo"
+                 value="SigmaDeLaMancha" maxlength="20" data-dato="apodo">
+        </div>
+
+        <fieldset class="formulario__grupo">
+          <legend class="formulario__etiqueta">Sonido</legend>
+          <label class="formulario__opcion">
+            <input type="radio" name="sonido" value="si" checked> Sí, que se oiga el aura
+          </label>
+          <label class="formulario__opcion">
+            <input type="radio" name="sonido" value="no"> No, prefiero el silencio
+          </label>
+        </fieldset>
+
+        <button class="boton boton--principal" type="submit">Guardar cambios</button>
+      </form>
+    </section>
+
+    <section class="bloque bloque--peligro">
+      <h2 class="bloque__titulo">Zona de peligro</h2>
+
+      <form class="formulario" action="index.html" method="post">
+        <button class="boton boton--secundario" type="submit" name="accion" value="cerrar-sesion">Cerrar sesión</button>
+      </form>
+
+      <form class="formulario" action="index.html" method="post">
+        <p class="aviso aviso--peligro">Borrar la cuenta elimina tu aura y tu personaje para siempre. Adiós, farmeo.</p>
+        <button class="boton boton--peligro" type="submit" name="accion" value="borrar-cuenta">Borrar mi cuenta</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
