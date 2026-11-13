@@ -1,0 +1,53 @@
+// ==========================================================
+// Menú de navegación
+// Móvil: fijo abajo. Pantallas anchas: arriba, en fila.
+// ==========================================================
+@use "variables" as v;
+@use "mixins" as m;
+
+.menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  background: var(--color-superficie-2);
+  border-top: 3px solid var(--color-acento);
+
+  @include m.desde(v.$tablet) {
+    position: static;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem 2rem;
+    border-top: 0;
+  }
+
+  &__enlace {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-texto);
+    border-radius: var(--radio);
+
+    @include m.desde(v.$tablet) {
+      flex: none;
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    &--activo {
+      color: v.$tinta;
+      background: var(--color-aura);
+    }
+  }
+}
