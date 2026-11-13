@@ -1,0 +1,22 @@
+// ==========================================================
+// Tema: variables CSS en :root
+// El tema alternativo solo cambia las variables de color.
+// ==========================================================
+@use "variables" as v;
+@use "mixins" as m;
+
+:root {
+  --fuente-titulos: #{v.$fuente-titulos};
+  --fuente-texto: #{v.$fuente-texto};
+  --radio: #{v.$radio};
+
+  // Tema oscuro por defecto
+  @include m.paleta(v.$oscuro);
+}
+
+// Si el sistema del jugador prefiere el tema claro
+@media (prefers-color-scheme: light) {
+  :root {
+    @include m.paleta(v.$claro);
+  }
+}
