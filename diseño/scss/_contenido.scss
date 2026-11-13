@@ -1,0 +1,43 @@
+// ==========================================================
+// Contenido principal y bloques
+// ==========================================================
+@use "variables" as v;
+@use "mixins" as m;
+
+.contenido {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem;
+
+  @include m.desde(v.$tablet) {
+    padding: 2rem;
+  }
+}
+
+.bloque {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio);
+
+  @include m.desde(v.$escritorio) {
+    padding: 1.75rem;
+  }
+
+  &__titulo {
+    color: var(--color-destacado);
+  }
+
+  &__texto {
+    color: var(--color-texto-suave);
+  }
+
+  &--personaje {
+    text-align: center;
+  }
+
+  &--peligro {
+    border-color: var(--color-peligro);
+  }
+}
