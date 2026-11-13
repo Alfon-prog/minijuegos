@@ -1,0 +1,68 @@
+// ==========================================================
+// Variables de Sass (valores fijos del proyecto)
+// ==========================================================
+
+// Tipografía
+// (cadenas con comillas dentro: al interpolarlas en _tema.scss las comillas se conservan)
+$fuente-titulos: '"Press Start 2P", monospace';
+$fuente-texto: '"Nunito", system-ui, sans-serif';
+
+// Forma
+$radio: 0.75rem;
+
+// Colores que no cambian con el tema
+$tinta: #2a1a00; // texto oscuro sobre fondos dorados o verdes
+$blanco: #ffffff;
+
+// Puntos de corte (mobile first: min-width)
+$tablet: 48rem; // 768 px
+$escritorio: 64rem; // 1024 px
+
+// ----------------------------------------------------------
+// Paletas de color. Cada clave se convierte en una variable
+// CSS (--color-fondo, --color-texto...) en _tema.scss.
+// ----------------------------------------------------------
+
+// Tema oscuro (el de origen)
+$oscuro: (
+  color-fondo: #120a2a,
+  color-fondo-2: #2a0f4d,
+  color-portada: #4b1a8f,
+  color-superficie: #1f1445,
+  color-superficie-2: #2c1d63,
+  color-texto: #f4f0ff,
+  color-texto-suave: #b9aee0,
+  color-aura: #ffd93d,
+  color-destacado: #ffd93d,
+  color-acento: #ff3df2,
+  color-ok: #3dffa8,
+  color-ok-texto: #3dffa8,
+  color-peligro: #ff4d6d,
+  color-borde: #4b3a8f,
+  color-aviso-regalo-1: #3a2a00,
+  color-aviso-regalo-2: #5a4300,
+  color-aviso-peligro: #3a0f1a,
+  sombra-neon: 0 0 0.75rem rgba(255, 61, 242, 0.45),
+);
+
+// Tema claro (se activa con prefers-color-scheme: light)
+$claro: (
+  color-fondo: #fdf6ff,
+  color-fondo-2: #e9dcff,
+  color-portada: #d9c2ff,
+  color-superficie: #ffffff,
+  color-superficie-2: #f3eaff,
+  color-texto: #24104d,
+  color-texto-suave: #5b4a8a,
+  color-aura: #ffc928,
+  color-destacado: #8a4b00,
+  color-acento: #c4159f,
+  color-ok: #2fd08a,
+  color-ok-texto: #0b7a4b,
+  color-peligro: #c9234a,
+  color-borde: #b9a6ee,
+  color-aviso-regalo-1: #fff2c2,
+  color-aviso-regalo-2: #ffe38a,
+  color-aviso-peligro: #ffe0e6,
+  sombra-neon: 0 0.25rem 1rem rgba(196, 21, 159, 0.25),
+);
