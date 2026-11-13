@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura Farmers · Tienda (Tailwind)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind para el navegador (sustituye a la hoja de estilos propia) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Los colores y fuentes del proyecto, definidos una sola vez como tema de Tailwind -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-fondo: #120a2a;
+      --color-superficie: #1f1445;
+      --color-superficie-2: #2c1d63;
+      --color-texto: #f4f0ff;
+      --color-suave: #b9aee0;
+      --color-aura: #ffd93d;
+      --color-acento: #ff3df2;
+      --color-ok: #3dffa8;
+      --color-borde: #4b3a8f;
+      --font-titulos: "Press Start 2P", monospace;
+      --font-texto: "Nunito", system-ui, sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-linear-to-b from-fondo to-[#2a0f4d] pb-20 font-texto text-base leading-normal text-texto md:pb-0">
+
+  <header class="flex items-center justify-between gap-3 border-b-[3px] border-acento bg-superficie px-4 py-3 md:px-8 md:py-4">
+    <p class="m-0 font-titulos text-[0.6rem] text-texto md:text-[0.9rem]">AURA<span class="text-acento [text-shadow:0_0_12px_rgba(255,61,242,0.45)]">FARMERS</span></p>
+    <p class="ml-auto whitespace-nowrap rounded-full bg-linear-to-br from-[#fff3a0] to-aura px-4 py-2 font-titulos text-[0.7rem] text-[#2a1a00] shadow-[0_0_12px_rgba(255,217,61,0.5)] md:px-6 md:py-[0.6rem] md:text-[0.95rem]"><span data-dato="aura">1.000</span> de aura</p>
+    <p class="flex size-10 flex-none items-center justify-center rounded-full bg-acento font-extrabold" title="Tu perfil"><span data-dato="inicial">S</span></p>
+  </header>
+
+  <nav class="fixed inset-x-0 bottom-0 z-10 flex gap-1 border-t-[3px] border-acento bg-superficie-2 p-2 md:static md:justify-center md:gap-4 md:border-t-0 md:px-8" aria-label="Navegación principal">
+    <a class="flex min-h-12 flex-1 items-center justify-center rounded-xl p-1 text-center text-xs font-extrabold text-texto no-underline md:flex-none md:px-6 md:py-2 md:text-base" href="lobby.html">Lobby</a>
+    <a class="flex min-h-12 flex-1 items-center justify-center rounded-xl bg-aura p-1 text-center text-xs font-extrabold text-[#2a1a00] no-underline md:flex-none md:px-6 md:py-2 md:text-base" href="tienda.html" aria-current="page">Tienda</a>
+    <a class="flex min-h-12 flex-1 items-center justify-center rounded-xl p-1 text-center text-xs font-extrabold text-texto no-underline md:flex-none md:px-6 md:py-2 md:text-base" href="personaje.html">Personaje</a>
+    <a class="flex min-h-12 flex-1 items-center justify-center rounded-xl p-1 text-center text-xs font-extrabold text-texto no-underline md:flex-none md:px-6 md:py-2 md:text-base" href="configuracion.html">Configuración</a>
+  </nav>
+
+  <main class="mx-auto max-w-5xl p-4 md:p-8">
+    <section class="mb-6 rounded-xl border-2 border-borde bg-superficie p-5 lg:p-7">
+      <h1 class="mb-4 font-titulos text-[1.1rem] leading-snug text-aura">Tienda de aura</h1>
+      <p class="mb-4 text-suave">Mejora a tu personaje. Cada artículo sube su nivel de aura.</p>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+
+        <article class="flex flex-col rounded-xl border-2 border-acento bg-superficie-2 p-4">
+          <p class="mb-1 text-[0.8rem] font-extrabold uppercase tracking-[0.08em] text-acento">Cabeza</p>
+          <h2 class="mb-4 font-titulos text-[0.95rem] leading-snug text-texto" data-dato="articulo-nombre">Gorra de NPC</h2>
+          <p class="mb-4 font-bold text-ok">Nivel <span data-dato="articulo-nivel">1</span></p>
+          <p class="mb-4 font-titulos text-[0.8rem] text-aura"><span data-dato="articulo-precio">250</span> de aura</p>
+          <button class="mt-auto inline-flex min-h-12 cursor-pointer items-center justify-center self-start rounded-full bg-ok px-6 py-[0.85rem] font-texto font-extrabold text-[#2a1a00] hover:brightness-110" type="button">Comprar</button>
+        </article>
+
+        <article class="flex flex-col rounded-xl border-2 border-acento bg-superficie-2 p-4">
+          <p class="mb-1 text-[0.8rem] font-extrabold uppercase tracking-[0.08em] text-acento">Cuerpo</p>
+          <h2 class="mb-4 font-titulos text-[0.95rem] leading-snug text-texto" data-dato="articulo-nombre">Sudadera de Sigma</h2>
+          <p class="mb-4 font-bold text-ok">Nivel <span data-dato="articulo-nivel">2</span></p>
+          <p class="mb-4 font-titulos text-[0.8rem] text-aura"><span data-dato="articulo-precio">400</span> de aura</p>
+          <button class="mt-auto inline-flex min-h-12 cursor-pointer items-center justify-center self-start rounded-full bg-ok px-6 py-[0.85rem] font-texto font-extrabold text-[#2a1a00] hover:brightness-110" type="button">Comprar</button>
+        </article>
+
+        <article class="flex flex-col rounded-xl border-2 border-acento bg-superficie-2 p-4">
+          <p class="mb-1 text-[0.8rem] font-extrabold uppercase tracking-[0.08em] text-acento">Calzado</p>
+          <h2 class="mb-4 font-titulos text-[0.95rem] leading-snug text-texto" data-dato="articulo-nombre">Chanclas con calcetín</h2>
+          <p class="mb-4 font-bold text-ok">Nivel <span data-dato="articulo-nivel">1</span></p>
+          <p class="mb-4 font-titulos text-[0.8rem] text-aura"><span data-dato="articulo-precio">150</span> de aura</p>
+          <button class="mt-auto inline-flex min-h-12 cursor-pointer items-center justify-center self-start rounded-full bg-ok px-6 py-[0.85rem] font-texto font-extrabold text-[#2a1a00] hover:brightness-110" type="button">Comprar</button>
+        </article>
+
+        <article class="flex flex-col rounded-xl border-2 border-acento bg-superficie-2 p-4">
+          <p class="mb-1 text-[0.8rem] font-extrabold uppercase tracking-[0.08em] text-acento">Accesorio</p>
+          <h2 class="mb-4 font-titulos text-[0.95rem] leading-snug text-texto" data-dato="articulo-nombre">Gafas de sol de noche</h2>
+          <p class="mb-4 font-bold text-ok">Nivel <span data-dato="articulo-nivel">3</span></p>
+          <p class="mb-4 font-titulos text-[0.8rem] text-aura"><span data-dato="articulo-precio">700</span> de aura</p>
+          <button class="mt-auto inline-flex min-h-12 cursor-pointer items-center justify-center self-start rounded-full bg-ok px-6 py-[0.85rem] font-texto font-extrabold text-[#2a1a00] hover:brightness-110" type="button">Comprar</button>
+        </article>
+
+      </div>
+    </section>
+  </main>
+</body>
