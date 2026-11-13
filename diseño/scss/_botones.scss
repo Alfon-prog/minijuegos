@@ -1,0 +1,53 @@
+// ==========================================================
+// Botones: todos usan el mixin boton(fondo, texto)
+// ==========================================================
+@use "variables" as v;
+@use "mixins" as m;
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem; // botones grandes, fáciles de pulsar con el dedo
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  @include m.boton(var(--color-aura));
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  &--principal {
+    @include m.boton(linear-gradient(135deg, var(--color-acento), #8a3dff), v.$blanco);
+    box-shadow: var(--sombra-neon);
+  }
+
+  &--google {
+    @include m.boton(v.$blanco, #222222);
+  }
+
+  &--bonus {
+    @include m.boton(linear-gradient(135deg, #fff3a0, var(--color-aura)));
+  }
+
+  &--comprar {
+    @include m.boton(var(--color-ok));
+  }
+
+  &--equipar {
+    @include m.boton(var(--color-acento), v.$blanco);
+  }
+
+  &--secundario {
+    @include m.boton(transparent, var(--color-texto));
+    border: 2px solid var(--color-borde);
+  }
+
+  &--peligro {
+    @include m.boton(var(--color-peligro), v.$blanco);
+  }
+}
