@@ -1,0 +1,27 @@
+// ==========================================================
+// Mixins reutilizables
+// ==========================================================
+@use "variables" as v;
+
+// Estilos para pantallas anchas: @include desde(v.$tablet) { ... }
+@mixin desde($ancho) {
+  @media (min-width: $ancho) {
+    @content;
+  }
+}
+
+// Lo que comparten TODOS los botones: forma, fondo y color de texto
+@mixin boton($fondo, $texto: v.$tinta) {
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  background: $fondo;
+  color: $texto;
+  font-weight: 800;
+}
+
+// Convierte un mapa de colores en variables CSS
+@mixin paleta($mapa) {
+  @each $nombre, $valor in $mapa {
+    --#{$nombre}: #{$valor};
+  }
+}
