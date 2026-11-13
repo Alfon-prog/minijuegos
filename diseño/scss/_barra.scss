@@ -1,0 +1,57 @@
+// ==========================================================
+// Barra superior (Flexbox): logo, aura y foto o inicial
+// ==========================================================
+@use "variables" as v;
+@use "mixins" as m;
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-superficie);
+  border-bottom: 3px solid var(--color-acento);
+
+  @include m.desde(v.$tablet) {
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    font-size: 0.6rem;
+
+    @include m.desde(v.$tablet) {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__aura {
+    margin: 0 0 0 auto;
+    padding: 0.5rem 1rem;
+    font-family: var(--fuente-titulos);
+    font-size: 0.7rem;
+    white-space: nowrap;
+    color: v.$tinta;
+    background: linear-gradient(135deg, #fff3a0, var(--color-aura));
+    border-radius: 999px;
+    box-shadow: 0 0 0.75rem rgba(255, 217, 61, 0.5);
+
+    @include m.desde(v.$tablet) {
+      font-size: 0.95rem;
+      padding: 0.6rem 1.5rem;
+    }
+  }
+
+  &__jugador {
+    flex: none;
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-weight: 800;
+    color: v.$blanco;
+    background: var(--color-acento);
+    border-radius: 50%;
+  }
+}
