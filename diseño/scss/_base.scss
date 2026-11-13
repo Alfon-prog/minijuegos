@@ -1,0 +1,50 @@
+// ==========================================================
+// Base: reinicio, cuerpo, títulos y enlaces
+// ==========================================================
+@use "variables" as v;
+@use "mixins" as m;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-texto);
+  background: linear-gradient(180deg, var(--color-fondo), var(--color-fondo-2));
+  min-height: 100vh;
+  // hueco para que el menú fijo de abajo (móvil) no tape el contenido
+  padding-bottom: 5rem;
+
+  @include m.desde(v.$tablet) {
+    padding-bottom: 0; // el menú ya no es fijo abajo
+  }
+}
+
+.pagina--portada {
+  padding-bottom: 0;
+  background: radial-gradient(circle at 50% 0%, var(--color-portada), var(--color-fondo) 70%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.4;
+  margin: 0 0 1rem;
+}
+
+h1 { font-size: 1.1rem; }
+h2 { font-size: 0.95rem; }
+h3 { font-size: 0.8rem; }
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--color-destacado);
+}
