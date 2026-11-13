@@ -1,0 +1,91 @@
+// ==========================================================
+// Formularios: móvil con etiqueta encima del campo; en pantallas
+// anchas, etiqueta a la izquierda y campo a la derecha
+// ==========================================================
+@use "variables" as v;
+@use "mixins" as m;
+
+.formulario {
+  margin-bottom: 1rem;
+
+  .boton {
+    width: 100%;
+
+    @include m.desde(v.$tablet) {
+      width: auto;
+    }
+  }
+
+  &__campo {
+    margin-bottom: 1rem;
+
+    @include m.desde(v.$tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 1rem;
+
+      .formulario__etiqueta {
+        flex: 0 0 8rem;
+        margin: 0;
+      }
+
+      .formulario__entrada {
+        flex: 1;
+        width: auto;
+      }
+
+      .formulario__ayuda {
+        flex: 0 0 100%;
+        margin-left: 9rem;
+      }
+    }
+  }
+
+  &__etiqueta {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 800;
+  }
+
+  &__entrada {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.75rem;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    color: var(--color-texto);
+    background: var(--color-fondo);
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio);
+
+    &:focus {
+      outline: 3px solid var(--color-aura);
+    }
+  }
+
+  &__ayuda {
+    margin: 0.4rem 0 0;
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+  }
+
+  &__grupo {
+    margin: 0 0 1rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio);
+  }
+
+  &__opcion {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 3rem;
+
+    input {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
