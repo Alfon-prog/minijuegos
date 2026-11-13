@@ -1,0 +1,39 @@
+// ==========================================================
+// Pantallas de bienvenida y primer acceso
+// ==========================================================
+@use "variables" as v;
+@use "mixins" as m;
+
+.portada {
+  padding: 2rem 1rem;
+
+  &__bloque {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    background: var(--color-superficie);
+    border: 2px solid var(--color-acento);
+    border-radius: 1rem;
+    box-shadow: var(--sombra-neon);
+
+    @include m.desde(v.$tablet) {
+      padding: 2.5rem;
+    }
+  }
+
+  &__frase {
+    font-size: 1rem;
+    color: var(--color-destacado);
+  }
+
+  &__texto {
+    color: var(--color-texto-suave);
+  }
+
+  &__nota {
+    margin: 1rem 0 0;
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+  }
+}
