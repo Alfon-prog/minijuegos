@@ -1,0 +1,17 @@
+// ==========================================================
+// Avisos
+// ==========================================================
+.aviso {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radio);
+
+  &--regalo {
+    background: linear-gradient(135deg, var(--color-aviso-regalo-1), var(--color-aviso-regalo-2));
+    border: 2px solid var(--color-aura);
+  }
+
+  &--peligro {
+    background: var(--color-aviso-peligro);
+    border: 2px solid var(--color-peligro);
+  }
+}
