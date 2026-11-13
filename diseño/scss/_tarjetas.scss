@@ -1,0 +1,84 @@
+// ==========================================================
+// Rejilla de tarjetas (Grid) y tarjetas de juegos y artículos
+// ==========================================================
+@use "variables" as v;
+@use "mixins" as m;
+
+// Móvil: una columna
+.tarjetas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @include m.desde(v.$tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--color-superficie-2);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio);
+
+  // el botón o la etiqueta se quedan siempre abajo de la tarjeta
+  .boton,
+  &__etiqueta {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  &__titulo {
+    color: var(--color-texto);
+  }
+
+  &__texto {
+    color: var(--color-texto-suave);
+  }
+
+  &__categoria {
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-acento);
+  }
+
+  &__nivel {
+    font-weight: 700;
+    color: var(--color-ok-texto);
+  }
+
+  &__precio {
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    color: var(--color-destacado);
+  }
+
+  &__estado {
+    font-weight: 700;
+    color: var(--color-texto-suave);
+  }
+
+  &__etiqueta {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--color-texto);
+    background: var(--color-borde);
+    border-radius: 999px;
+  }
+
+  &--bloqueada {
+    opacity: 0.7;
+    border-style: dashed;
+  }
+
+  &--articulo {
+    border-color: var(--color-acento);
+  }
+}
